@@ -29,15 +29,16 @@ const htmlContent = `
 </head>
 <body>
     <div class="container">
-        <h1>🌍 Ghaffar AI Agent</h1>
+        <h1>AI job Agent</h1>
         <div class="filters">
             <div>
                 <label style="font-size:10px">COUNTRY</label>
                 <select id="country">
                     <option value="Worldwide">Worldwide</option>
-                    <option value="Pakistan">Pakistan 🇵🇰</option>
-                    <option value="USA">USA 🇺🇸</option>
-                    <option value="UAE">UAE 🇦🇪</option>
+                    <option value="Pakistan">Pakistan </option>
+                    <option value="USA">USA 
+                    </option>
+                    <option value="UAE">UAE </option>
                 </select>
             </div>
             <div>
