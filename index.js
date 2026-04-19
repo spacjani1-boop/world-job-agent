@@ -5,10 +5,10 @@ const Groq = require("groq-sdk");
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 app.get('/', (req, res) => {
-  res.send('🌍 Ghaffar Bhai, Worldwide AI Agent is LIVE on Render!');
+  res.send('🌍 Ghaffar Bhai, Worldwide AI Agent is LIVE on Vercel!');
 });
 
-app.get('/scan', async (req, res) => {
+app.get('/api/scan', async (req, res) => {
   try {
     const completion = await groq.chat.completions.create({
       messages: [{ role: "user", content: "Give me 3 trending remote job titles worldwide for 2026." }],
@@ -20,5 +20,4 @@ app.get('/scan', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+module.exports = app;
