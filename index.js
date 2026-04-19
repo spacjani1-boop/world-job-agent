@@ -34,7 +34,7 @@ const htmlContent = `
 </head>
 <body>
     <div class="container">
-        <h1>🌍 Worldwide Job Agent</h1>
+        <h1> Worldwide Ai Job Agent</h1>
         <div class="status">● LIVE SEARCH ENABLED (2026)</div>
         
         <div class="upload-section">
