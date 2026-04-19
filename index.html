@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghaffar AI Agent</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background: #0f172a; color: white; text-align: center; padding: 50px; }
+        .card { background: #1e293b; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: inline-block; max-width: 500px; }
+        button { background: #38bdf8; border: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        button:hover { background: #0ea5e9; }
+        #results { margin-top: 20px; text-align: left; background: #334155; padding: 15px; border-radius: 8px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🌍 Worldwide AI Agent</h1>
+        <p>Ghaffar Bhai ka AI Agent dunya bhar ki jobs scan kar raha hai...</p>
+        <button onclick="scanJobs()">Scan Trending Jobs 2026</button>
+        <div id="results">Loading...</div>
+    </div>
+
+    <script>
+        async function scanJobs() {
+            const resDiv = document.getElementById('results');
+            resDiv.style.display = 'block';
+            resDiv.innerText = 'AI is searching...';
+            try {
+                const response = await fetch('/api/scan');
+                const data = await response.json();
+                resDiv.innerText = data.ai_response;
+            } catch (e) {
+                resDiv.innerText = 'Error connecting to AI!';
+            }
+        }
+    </script>
+</body>
+</html>
+                      
